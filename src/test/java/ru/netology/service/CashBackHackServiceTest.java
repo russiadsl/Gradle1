@@ -1,49 +1,26 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashBackHackServiceTest {
 
     @Test
-    public static void shouldCalculateIfAmount400() {
+    public void cashBackHackIfAmount800() {
         CashBackHackService cashBackHackService = new CashBackHackService();
 
-        cashBackHackService.remain(400);
+        cashBackHackService.remain(800);
 
-        assertEquals(cashBackHackService.remain(400), 600);
-
+        assertEquals(200, cashBackHackService.remain(800));
     }
 
     @Test
-    public static void shouldCalculateIfAmount1500() {
+    public void cashBackHackIfAmount1000() {
         CashBackHackService cashBackHackService = new CashBackHackService();
 
-        cashBackHackService.remain(1500);
+        cashBackHackService.remain(1000);
 
-        assertEquals(cashBackHackService.remain(1500), 500);
-
+        assertEquals(1000, cashBackHackService.remain(1000));
     }
-
-    @Test
-    public static void shouldCalculateIfAmount999() {
-        CashBackHackService cashBackHackService = new CashBackHackService();
-
-        cashBackHackService.remain(999);
-
-        assertEquals(cashBackHackService.remain(999), 1);
-
-    }
-
-    @Test
-    public static void shouldCalculateIfAmount0() {
-        CashBackHackService cashBackHackService = new CashBackHackService();
-
-        cashBackHackService.remain(0);
-
-        assertEquals(cashBackHackService.remain(0), 1000);
-
-    }
-
 }
