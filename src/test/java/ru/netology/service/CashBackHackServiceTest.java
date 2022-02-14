@@ -7,12 +7,12 @@ import static org.testng.Assert.*;
 public class CashBackHackServiceTest {
 
     @Test
-    public static void shouldCalculateIfAmount400() {
+    public static void shouldCalculateIfAmount1000() {
         CashBackHackService cashBackHackService = new CashBackHackService();
 
-        cashBackHackService.remain(400);
+        cashBackHackService.remain(1000);
 
-        assertEquals(cashBackHackService.remain(400), 600);
+        assertEquals(cashBackHackService.remain(1000), 0);
 
     }
 
